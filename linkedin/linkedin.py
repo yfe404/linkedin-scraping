@@ -48,7 +48,7 @@ class Linkedin(webdriver.Firefox):
 
     def hasNext(self):
         try:
-            button_next = self.find_elements_by_class_name("next")[0]
+            button_next = self.find_elements_by_class_name("artdeco-pagination__button--next")[0]
             button_next.text
             return True
         except IndexError:
@@ -56,7 +56,7 @@ class Linkedin(webdriver.Firefox):
 
     
     def next(self):
-        button_next = self.find_elements_by_class_name("next")[0]
+        button_next = self.find_elements_by_class_name("artdeco-pagination__button--next")[0]
         button_next.click()
 
     def close(self):
