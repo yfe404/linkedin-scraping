@@ -1,0 +1,55 @@
+* Linkedin Scraping
+
+
+** Prerequisites
+
+*** Softwares
+
+- Python 3.6+
+- Geckodriver (must be present in PATH) version used: 0.24.0
+- Firefox version used: 67.0
+
+
+*** Environment Variables
+
+- USER_LINKEDIN="your_linkedin_username" 
+- PASSWORD_LINKEDIN="your_linkedin_password"
+
+
+*** Python dependencies
+
+Install python dependencies:
+
+#+BEGIN_SRC sh
+pip install -r requirements.txt
+#+END_SRC
+
+
+** Usage 
+
+From the terminal 
+
+#+BEGIN_SRC sh
+python main.py
+#+END_SRC
+
+*** Options and arguments
+
+| Short argument | Long equivalent           | Action                                    | Default value       |
+|----------------+---------------------------+-------------------------------------------+---------------------|
+| -k KEYWORDS    | --keywords KEYWORDS       | Fetch results for KEYWORDS on Linkedin    | "Software Engineer" |
+| -n PAGES       |                           | Number of result pages to scrap           | 5                   |
+| -o OUTPUT_FILE | --output-file OUTPUT_FILE | Path to the file in which to save results | ./output.csv        |
+| -v             | --verbose                 | Print results in STDIN and in OUTPUT_FILE |                     |
+| -h             | --help                    | Print help menu                           |                     |
+
+
+** Example
+
+Use case: I want to scrap 50 pages of software engineer profiles
+
+#+BEGIN_SRC sh
+python main.py -n 50 -k "software engineer"
+#+END_SRC
+
+
